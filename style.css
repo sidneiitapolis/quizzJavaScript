@@ -151,7 +151,7 @@ body{
 
    
     #quizz-container{
-        width: 80%;
+        width: 90%;
         
         border: 1px solid #cddde8;
     }
@@ -159,6 +159,7 @@ body{
     
     .resposta-questao{
         font-size: .9rem;
+        
     }
 }
 
