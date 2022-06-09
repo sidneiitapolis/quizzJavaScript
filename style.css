@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+   
+
+}
+
+body{
+    background-color: black;
+    color: aliceblue;
+}
+
+.hide{
+    display:none !important;
+}
+
+#titulo{
+    font-size: 1.5rem;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #2d425a;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#placar-container{
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
+    width: 60%;
+    margin:1% auto;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+#placar-container p{
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+#placar-container #display-placar{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#resposta-correta{
+    font-weight: bold;
+    color: rgb(14, 205, 14);
+}
+
+#qtd-questoes{
+    font-weight: bold;
+    color: rgb(31, 106, 193);
+}
+
+#btn-reiniciar{
+    background-color: chocolate;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: .8rem;
+    height: 50px;
+    border-radius: 25%;
+    border: 2px solid transparent;
+    width: 55%;
+    text-transform: uppercase;
+    margin-top: 1%;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+#btn-reiniciar:hover{
+    background-color: transparent;
+    border-color: chocolate;
+    color: chocolate;
+
+}
+
+
+#quizz-container{
+    width: 60%;
+    
+    margin:20px auto;
+    text-align: center;
+    padding: 25px;
+    border-radius: 25px;
+    border: 1px solid #cddde8;
+}
+
+
+#questao-numero{
+    font-weight: bold;
+}
+
+
+#caixa-respostas button{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: #cddde8;
+    padding-left: 8px;
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 30px;
+    height: 40px;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+
+#caixa-respostas button:hover{
+    background-color: chocolate;
+    color:aliceblue;
+}
+
+#caixa-respostas .btn-letra{
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: chocolate;
+    color: azure;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30px;
+
+
+}
+
+.resposta-questao{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+#caixa-respostas .resposta-errada,
+#caixa-respostas .resposta-errada .btn-letra{
+    background-color: chocolate;
+    color: aliceblue;
+}
+
+#caixa-respostas .resposta-correta,
+#caixa-respostas .resposta-correta .btn-letra{
+    background-color: rgb(8, 180, 59);
+    color: aliceblue;
+}
+
+@media(max-width:450px){
+
+
+   
+    #quizz-container{
+        width: 80%;
+        
+        border: 1px solid #cddde8;
+    }
+
+    
+    .resposta-questao{
+        font-size: .9rem;
+    }
+}
+

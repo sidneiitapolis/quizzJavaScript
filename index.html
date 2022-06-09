@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz de Java Script</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1 id="titulo">Quizz de JavaScript</h1>
+
+    <div id="placar-container" class="hide">
+        <p ><span id="display-placar">90</span>%</p>
+        <p>Você acertou <span id="resposta-correta">0</span> de 
+            <span id="qtd-questoes">10</span> perguntas</p>
+        <button id="btn-reiniciar">Refazer quizz</button>
+    </div>
+
+    <div id="quizz-container">
+        <p id="questao>"> <span id="questao-numero">1</span> - 
+            <span id="questao-texto">Quem é o gato lider?</span>
+        </p>
+    
+
+        <div id="caixa-respostas">
+            <button ><span class="btn-letra">a</span> <span class="resposta-questao">Ladrão</span></button>
+            <button ><span class="btn-letra">b</span> <span class="resposta-questao">Cirrose</span></button>
+            <button><span class="btn-letra">c</span> <span class="resposta-questao">Baby</span></button>
+            <button><span class="btn-letra">d</span> <span class="resposta-questao">Pelinho</span></button>
+        </div>
+
+    </div>
+
+    <!--Template da resposta-->
+    <button class="resposta-template hide"><span  class="btn-letra">a</span> <span class="resposta-questao">Ladrão</span></button>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
