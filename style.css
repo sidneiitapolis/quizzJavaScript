@@ -16,6 +16,35 @@ body{
     display:none !important;
 }
 
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    margin:20px auto;
+    background-color: #fff;
+    width: 80%;
+    border:none;
+    height: 300px;
+    border-radius: 20%;
+}
+
+
+#btn-login{
+
+}
+
+#nome{
+    width: 40%;
+    border:none;
+    border-radius: 10%;
+    font-size: 1rem;
+    padding: 4px;
+    margin-bottom: 15px;
+    box-shadow: 10px 5px 5px black;
+    text-align: center;
+}
+
 #titulo{
     font-size: 2rem;
     padding: 40px 0;
@@ -148,7 +177,10 @@ body{
 
 @media(max-width:450px){
 
-
+    #nome{
+        width: 90%;
+        
+    }
    
     #quizz-container{
         width: 95%;

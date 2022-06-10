@@ -1,4 +1,6 @@
 //Declaraçao de variaveis
+const login=document.getElementById('login')
+const botaologin=document.getElementById('btn-ok')
 const questao=document.querySelector('#questao')
 const caixaRespostas=document.querySelector('#caixa-respostas')
 
@@ -222,9 +224,19 @@ function criaQuestao(i){
 
     //mostra ou esconde o placar
     function mostraOuEsconde(){
+        
         quizzContainer.classList.toggle('hide')  //toggle se tem hide ele tira ou vice versa
         placarContainer.classList.toggle('hide')
     }
+
+    // coloca o evento no botao de login
+    botaologin.addEventListener("click",()=>{
+        login.classList.add('hide')
+        quizzContainer.classList.toggle('hide') 
+        
+
+    })
+
 
     //reiniciar quiz
     const botaoReiniciar=document.getElementById('btn-reiniciar')
