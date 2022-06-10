@@ -17,7 +17,7 @@ body{
 }
 
 #titulo{
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 40px 0;
     text-align: center;
     background-color: #2d425a;
@@ -80,8 +80,8 @@ body{
 
 
 #quizz-container{
-    width: 60%;
-    
+    width: 70%;
+    font-size: 1.5rem;
     margin:20px auto;
     text-align: center;
     padding: 25px;
@@ -99,12 +99,12 @@ body{
     display: flex;
     align-items: center;
     text-align: left;
-    background-color: #cddde8;
-    padding-left: 8px;
-    margin: 15px 0;
+    background-color: #ffffff;
+    padding-left: 4px;
+    margin: 10px 0;
     width: 100%;
-    border-radius: 30px;
-    height: 40px;
+    border-radius: 20px;
+    height: 55px;
     cursor: pointer;
     transition: .5s;
     
@@ -151,15 +151,25 @@ body{
 
    
     #quizz-container{
-        width: 90%;
-        
+        width: 95%;
+        font-size: 1.3rem;
         border: 1px solid #cddde8;
     }
 
     
-    .resposta-questao{
-        font-size: .9rem;
+    #caixa-respostas button{
+        padding-left: 4px;
+        margin: 5px 0;        
+        border-radius: 20px;
+        height: 55px;
+        font-size: 1rem;
         
-    }
+    }   
+
+    
+
+    
+
+   
 }
 
