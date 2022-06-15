@@ -124,6 +124,7 @@ const questoes=[
 //substituiçao do quizz para primeira pergunta
 
 function inicia(){
+    nome.focus()
     //criar a primeira pergunta
    criaQuestao(0)
 }
@@ -245,21 +246,7 @@ function criaQuestao(i){
        
     }
 
-    /*/mostra jogadas anteriores
-    function todasJogadas(){
-        let nomeS=document.getElementById('s-nome')
-        let pontosS=document.getElementById('s-pontos')
-
-        for(let i=0;i<=jogadores.length;i++){
-            nomeS.textContent=jogadores[i].jogador
-            pontosS.textContent=jogadores[i].Pontos
-
-        }
-
-       
-    }*/
-
-         
+           
        
     
         function gerar(){
@@ -302,6 +289,7 @@ function criaQuestao(i){
         if (document.getElementById('nome').value == '')
                 {
                     document.getElementById('msg-input').innerHTML='Digite seu Apelido'
+                    nome.focus()
                 }else
                     {
                         login.classList.add('hide')
@@ -326,6 +314,7 @@ function criaQuestao(i){
         placarContainer.classList.add('hide')
         login.classList.remove('hide')
         nome.value=''
+        nome.focus()
         document.getElementById('msg-input').innerHTML=''
         inicia()
     })
