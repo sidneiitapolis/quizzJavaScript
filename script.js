@@ -245,7 +245,7 @@ function criaQuestao(i){
        
     }
 
-    //mostra jogadas anteriores
+    /*/mostra jogadas anteriores
     function todasJogadas(){
         let nomeS=document.getElementById('s-nome')
         let pontosS=document.getElementById('s-pontos')
@@ -257,7 +257,7 @@ function criaQuestao(i){
         }
 
        
-    }
+    }*/
 
          
        
@@ -268,7 +268,13 @@ function criaQuestao(i){
             
             let lista = document.getElementById('lista');
             lista.textContent=''
-            for(var i = 0; i < jogadores.length; i++){
+
+            //coloca o array em ordem decrescente pelo atributo pontos
+            jogadores.sort(function(a,b) {
+                return a.Pontos > b.Pontos ? -1 : a.Pontos < b.Pontos ? 1 : 0;
+            });
+
+            for(var i = 0; i < 3; i++){
                 let item = document.createElement('li');
                 item.appendChild(document.createTextNode(jogadores[i].jogador));
                 item.appendChild(document.createTextNode(' acertou '));
@@ -292,13 +298,22 @@ function criaQuestao(i){
 
     // coloca o evento no botao de login
     botaologin.addEventListener("click",()=>{
-        login.classList.add('hide')
-        quizzContainer.classList.toggle('hide') 
-        jogador=document.getElementById('nome').value
-        //console.log(jogador)
-        
+
+        if (document.getElementById('nome').value == '')
+                {
+                    document.getElementById('msg-input').innerHTML='Digite seu Apelido'
+                }else
+                    {
+                        login.classList.add('hide')
+                        quizzContainer.classList.toggle('hide') 
+                        jogador=document.getElementById('nome').value
+                        //console.log(jogador)
+                    }   
 
     })
+
+       
+   
 
 
     //reiniciar quiz
@@ -311,6 +326,7 @@ function criaQuestao(i){
         placarContainer.classList.add('hide')
         login.classList.remove('hide')
         nome.value=''
+        document.getElementById('msg-input').innerHTML=''
         inicia()
     })
 
