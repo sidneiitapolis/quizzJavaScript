@@ -75,14 +75,14 @@ body{
     color: black;
     text-align: center;
     width: 60%;
-    margin:1% auto;
-    padding: 25px;
+    margin:0px auto;
+    padding: 5px;
     border-radius: 20px;
 }
 
 #placar-container p{
     font-size: 1rem;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 #placar-container #display-placar{
@@ -209,7 +209,7 @@ body{
     }
    
     #quizz-container{
-        width: 95%;
+        width: 98%;
         font-size: 1.3rem;
         border: 1px solid #cddde8;
     }
@@ -220,9 +220,27 @@ body{
         margin: 5px 0;        
         border-radius: 20px;
         height: 55px;
-        font-size: 1rem;
-        
+      
+       
     }   
+
+    .resposta-questao{
+        font-size: .7rem;
+    }
+
+    #placar-container{
+        
+        width: 95%;
+        
+    }
+
+    #display-placar{
+        margin-top: 0px;
+    }
+
+    #salvos{
+        width: 95%;
+    }
 
 
 

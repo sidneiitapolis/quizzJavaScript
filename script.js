@@ -50,18 +50,18 @@ const questoes=[
     },
 
     {
-        'questao': 'Quantos anos tem a Rainha Elisabethi?',
+        'questao': 'JavaScript é sensitive case',
         'respostas':[
             {
-                'resposta': '18',
+                'resposta': 'não',
                 'correct': 'false'
             },
             {
-                'resposta': '88g',
+                'resposta': 'as vezes',
                 'correct': 'false'
             },
             {
-                'resposta': '96',
+                'resposta': 'sim',
                 'correct': 'true'
             },
             {
