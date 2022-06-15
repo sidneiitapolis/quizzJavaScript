@@ -3,12 +3,24 @@ const login=document.getElementById('login')
 const botaologin=document.getElementById('btn-ok')
 const questao=document.querySelector('#questao')
 const caixaRespostas=document.querySelector('#caixa-respostas')
-
+const nome=document.getElementById('nome')
 const quizzContainer=document.querySelector('#quizz-container')
 const placarContainer=document.querySelector('#placar-container')
 const letras=['a','b','c','d']
+const botaosalvo=document.getElementById('btn-salvo')
+const ranking=document.getElementById('salvos')
 let pontos=0
 let questaAtual=0
+let jogador
+
+let jogadores=[]
+
+
+
+
+
+
+
 
 
 //Perguntas
@@ -200,19 +212,20 @@ function criaQuestao(i){
         setTimeout(() => {
             if(questaAtual >=questoes.length){
                 //msg
+                gravaJogada(jogador,pontos)
                 mostraMsgSucesso()
                 return
             }
 
             criaQuestao(questaAtual)
             
-        }, 1000);
+        }, 500);
     }
 
     //exibe tela final
     function mostraMsgSucesso(){
-        mostraOuEsconde()
-
+        quizzContainer.classList.add('hide')
+        placarContainer.classList.remove('hide')
         const porcentagem= ((pontos/questoes.length)*100).toFixed(1)
 
         document.getElementById('display-placar').textContent=porcentagem.toString()
@@ -222,17 +235,67 @@ function criaQuestao(i){
 
     }
 
-    //mostra ou esconde o placar
-    function mostraOuEsconde(){
-        
-        quizzContainer.classList.toggle('hide')  //toggle se tem hide ele tira ou vice versa
-        placarContainer.classList.toggle('hide')
+    //grava 
+    function gravaJogada(j,p){
+        jogadores.push({
+            'jogador':j,
+            'Pontos':p})
+       
+        console.log(jogadores)
+       
     }
+
+    //mostra jogadas anteriores
+    function todasJogadas(){
+        let nomeS=document.getElementById('s-nome')
+        let pontosS=document.getElementById('s-pontos')
+
+        for(let i=0;i<=jogadores.length;i++){
+            nomeS.textContent=jogadores[i].jogador
+            pontosS.textContent=jogadores[i].Pontos
+
+        }
+
+       
+    }
+
+         
+       
+    
+        function gerar(){
+
+           
+            
+            let lista = document.getElementById('lista');
+            lista.textContent=''
+            for(var i = 0; i < jogadores.length; i++){
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(jogadores[i].jogador));
+                item.appendChild(document.createTextNode(' acertou '));
+                item.appendChild(document.createTextNode(jogadores[i].Pontos));
+                lista.appendChild(item);
+            }
+        }
+    
+
+    //
+    botaosalvo.addEventListener('click',()=>{
+        ranking.classList.remove('hide')
+        placarContainer.classList.add('hide') 
+        setTimeout(() => {
+            ranking.classList.add('hide')
+            placarContainer.classList.remove('hide')
+         },3000);     
+       gerar()
+    }) 
+   
 
     // coloca o evento no botao de login
     botaologin.addEventListener("click",()=>{
         login.classList.add('hide')
         quizzContainer.classList.toggle('hide') 
+        jogador=document.getElementById('nome').value
+        //console.log(jogador)
         
 
     })
@@ -244,7 +307,10 @@ function criaQuestao(i){
 
         questaAtual=0
         pontos=0
-        mostraOuEsconde()
+        
+        placarContainer.classList.add('hide')
+        login.classList.remove('hide')
+        nome.value=''
         inicia()
     })
 

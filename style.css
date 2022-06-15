@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
    
+
+}
+
+#lista{
+    margin-top: 20px;
+    list-style:none;
+    color: #eb8211;
+    font-size: 1.5rem;
+    font-style: italic;
+    
+}
+
+#ranking{
+    font-family:'Alfa Slab One', cursive;
 
 }
 
@@ -96,7 +112,7 @@ body{
     text-transform: uppercase;
     margin-top: 1%;
     cursor: pointer;
-    transition: .5s;
+    transition: .3s;
 
 }
 
@@ -175,6 +191,16 @@ body{
     color: aliceblue;
 }
 
+#salvos{
+    background-color: rgb(11, 17, 202);
+    color:#fff;
+    border-radius: 15%;
+    width: 60%;
+    margin: 15px auto;
+    height: 250px;
+    text-align: center;
+}
+
 @media(max-width:450px){
 
     #nome{
@@ -197,6 +223,8 @@ body{
         font-size: 1rem;
         
     }   
+
+
 
     
 
